@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoa Tươi - Cửa hàng hoa tươi chất lượng cao</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#ff6b6b", secondary: "#4ecdc4" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+      .hero-section {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=beautiful%2520flower%2520shop%2520with%2520various%2520colorful%2520fresh%2520flowers%2520arrangements%2520displayed%2520elegantly%2520on%2520wooden%2520shelves%252C%2520soft%2520natural%2520lighting%252C%2520pastel%2520color%2520palette%252C%2520high%2520quality%252C%2520professional%2520photography%252C%2520commercial%2520interior&width=1200&height=600&seq=flower1&orientation=landscape');
+          background-size: cover;
+          background-position: center;
+      }
+      input:focus, button:focus {
+          outline: none;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      .custom-checkbox {
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+      }
+      .custom-checkbox input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+      }
+      .checkmark {
+          height: 20px;
+          width: 20px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          position: relative;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+          background-color: #ff6b6b;
+          border-color: #ff6b6b;
+      }
+      .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+          display: block;
+      }
+      .custom-checkbox .checkmark:after {
+          left: 7px;
+          top: 3px;
+          width: 6px;
+          height: 12px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+      }
+      .product-card:hover .quick-view {
+          opacity: 1;
+      }
+      .scroll-to-top {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+      }
+      .scroll-to-top.active {
+          opacity: 1;
+          visibility: visible;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+          </div>
+
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="text-gray-800 font-medium hover:text-primary transition-colors"
+              >Trang chủ</a
+            >
+            <a
+              href="#"
+              class="text-gray-800 font-medium hover:text-primary transition-colors"
+              >Sản phẩm</a
+            >
+            <a
+              href="#"
+              class="text-gray-800 font-medium hover:text-primary transition-colors"
+              >Về chúng tôi</a
+            >
+            <a
+              href="#"
+              class="text-gray-800 font-medium hover:text-primary transition-colors"
+              >Liên hệ</a
+            >
+          </nav>
+
+          <div class="flex items-center space-x-4">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Tìm kiếm..."
+                class="pl-10 pr-4 py-2 rounded-full border border-gray-200 text-sm w-40 md:w-60 focus:border-primary transition-colors"
+              />
+              <div
+                class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400"
+              >
+                <i class="ri-search-line"></i>
+              </div>
+            </div>
+
+            <div class="relative">
+              <a href="#" class="block relative">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line text-xl"></i>
+                </div>
+                <span
+                  class="absolute -top-1 -right-1 bg-primary text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
+                  >3</span
+                >
+              </a>
+            </div>
+
+            <button
+              class="md:hidden w-10 h-10 flex items-center justify-center"
+            >
+              <i class="ri-menu-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-16 md:py-24">
+      <div class="container mx-auto px-4 w-full">
+        <div class="max-w-lg">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Hoa Tươi Mỗi Ngày
+          </h1>
+          <p class="text-lg text-gray-600 mb-8">
+            Mang vẻ đẹp thiên nhiên vào không gian sống của bạn với những bó hoa
+            tươi được chọn lọc kỹ lưỡng và thiết kế tinh tế.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#"
+              class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors text-center whitespace-nowrap"
+              >Mua ngay</a
+            >
+            <a
+              href="#"
+              class="border border-gray-300 text-gray-700 px-6 py-3 rounded-button font-medium hover:border-primary hover:text-primary transition-colors text-center whitespace-nowrap"
+              >Xem bộ sưu tập</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Danh Mục Sản Phẩm
+          </h2>
+          <p class="text-gray-600">
+            Khám phá các bộ sưu tập hoa đa dạng của chúng tôi
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <a href="#" class="group">
+            <div
+              class="overflow-hidden rounded-lg shadow-md bg-white transition-transform hover:-translate-y-1"
+            >
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=beautiful%2520birthday%2520flower%2520bouquet%2520with%2520colorful%2520roses%2520and%2520lilies%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower2&orientation=squarish"
+                  alt="Hoa sinh nhật"
+                  class="w-full h-full object-cover object-top transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Hoa Sinh Nhật
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Những bó hoa tươi thắm dành tặng người thân yêu
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="group">
+            <div
+              class="overflow-hidden rounded-lg shadow-md bg-white transition-transform hover:-translate-y-1"
+            >
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=elegant%2520wedding%2520flower%2520bouquet%2520with%2520white%2520roses%2520and%2520lilies%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower3&orientation=squarish"
+                  alt="Hoa cưới"
+                  class="w-full h-full object-cover object-top transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-xl font-semibold text-gray-800">Hoa Cưới</h3>
+                <p class="text-gray-600 mt-2">
+                  Thiết kế tinh tế cho ngày trọng đại
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="group">
+            <div
+              class="overflow-hidden rounded-lg shadow-md bg-white transition-transform hover:-translate-y-1"
+            >
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=congratulation%2520flower%2520bouquet%2520with%2520bright%2520sunflowers%2520and%2520colorful%2520gerberas%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower4&orientation=squarish"
+                  alt="Hoa chúc mừng"
+                  class="w-full h-full object-cover object-top transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Hoa Chúc Mừng
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Chia sẻ niềm vui trong những dịp đặc biệt
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="group">
+            <div
+              class="overflow-hidden rounded-lg shadow-md bg-white transition-transform hover:-translate-y-1"
+            >
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=sympathy%2520flower%2520arrangement%2520with%2520white%2520lilies%2520and%2520roses%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower5&orientation=squarish"
+                  alt="Hoa chia buồn"
+                  class="w-full h-full object-cover object-top transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div class="p-4 text-center">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Hoa Chia Buồn
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Thể hiện sự tôn kính và chia sẻ
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Sản Phẩm Nổi Bật
+          </h2>
+          <p class="text-gray-600">Những bó hoa được yêu thích nhất</p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <!-- Product 1 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520pink%2520roses%2520and%2520white%2520lilies%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower6&orientation=squarish"
+                alt="Bó hoa hồng phấn"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Hồng Phấn
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(24)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">650.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520red%2520roses%2520and%2520baby%2520breath%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower7&orientation=squarish"
+                alt="Bó hoa hồng đỏ"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Hồng Đỏ
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(42)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">750.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520sunflowers%2520and%2520white%2520daisies%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower8&orientation=squarish"
+                alt="Bó hoa hướng dương"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Hướng Dương
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(18)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">550.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520purple%2520tulips%2520and%2520white%2520lilies%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower9&orientation=squarish"
+                alt="Bó hoa tulip tím"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Tulip Tím
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(31)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">850.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520mixed%2520pastel%2520flowers%2520with%2520roses%2520and%2520carnations%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower10&orientation=squarish"
+                alt="Bó hoa pastel"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Pastel
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(27)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">620.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520white%2520lilies%2520and%2520blue%2520hydrangeas%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower11&orientation=squarish"
+                alt="Bó hoa loa kèn"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Loa Kèn
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(35)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">720.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520orange%2520roses%2520and%2520yellow%2520gerberas%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower12&orientation=squarish"
+                alt="Bó hoa hồng cam"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Hồng Cam
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(22)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">680.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div
+            class="product-card bg-white rounded-lg shadow-md overflow-hidden"
+          >
+            <div class="relative h-72 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=beautiful%2520bouquet%2520of%2520pink%2520peonies%2520and%2520white%2520roses%2520on%2520clean%2520white%2520background%252C%2520professional%2520photography%252C%2520soft%2520lighting%252C%2520high%2520quality%252C%2520commercial%2520product%2520photography&width=500&height=500&seq=flower13&orientation=squarish"
+                alt="Bó hoa mẫu đơn"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="quick-view absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 transition-opacity"
+              >
+                <button
+                  class="bg-white text-gray-800 px-4 py-2 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+                >
+                  Xem nhanh
+                </button>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                Bó Hoa Mẫu Đơn
+              </h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <span class="text-gray-500 text-sm ml-1">(48)</span>
+              </div>
+              <div class="flex justify-between items-center mt-3">
+                <span class="text-primary font-bold text-lg">950.000đ</span>
+                <button
+                  class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-90 transition-colors"
+                >
+                  <i class="ri-shopping-cart-2-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a
+            href="#"
+            class="inline-block border border-primary text-primary px-6 py-3 rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+            >Xem tất cả sản phẩm</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Dịch Vụ & Cam Kết
+          </h2>
+          <p class="text-gray-600">
+            Chúng tôi luôn đặt sự hài lòng của khách hàng lên hàng đầu
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 text-primary flex items-center justify-center"
+            >
+              <i class="ri-truck-line text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Giao Hàng Nhanh
+            </h3>
+            <p class="text-gray-600">
+              Giao hàng trong vòng 2 giờ trong nội thành Hà Nội và TP. Hồ Chí
+              Minh
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 text-primary flex items-center justify-center"
+            >
+              <i class="ri-leaf-line text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Hoa Tươi 100%
+            </h3>
+            <p class="text-gray-600">
+              Cam kết hoa tươi mới mỗi ngày, đảm bảo chất lượng tốt nhất
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 text-primary flex items-center justify-center"
+            >
+              <i class="ri-palette-line text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Thiết Kế Theo Yêu Cầu
+            </h3>
+            <p class="text-gray-600">
+              Đội ngũ florist chuyên nghiệp, sẵn sàng thiết kế theo ý tưởng của
+              bạn
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-lg text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-4 text-primary flex items-center justify-center"
+            >
+              <i class="ri-refresh-line text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Đổi Trả Trong 24h
+            </h3>
+            <p class="text-gray-600">
+              Không hài lòng? Chúng tôi sẵn sàng đổi hoặc hoàn tiền trong vòng
+              24h
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Khách Hàng Nói Gì
+          </h2>
+          <p class="text-gray-600">
+            Những đánh giá từ khách hàng đã trải nghiệm dịch vụ của chúng tôi
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex text-yellow-400 mb-3">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Tôi đã đặt một bó hoa sinh nhật cho mẹ và thực sự ấn tượng với
+              chất lượng hoa. Hoa tươi lâu và mẹ tôi rất thích. Dịch vụ giao
+              hàng nhanh chóng và đúng hẹn."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3"
+              >
+                <i class="ri-user-line text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">Nguyễn Thị Hương</h4>
+                <p class="text-gray-500 text-sm">Khách hàng tại Hà Nội</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex text-yellow-400 mb-3">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Đặt hoa cho ngày kỷ niệm và thực sự hài lòng với kết quả. Bó hoa
+              đẹp hơn cả trong hình, hoa tươi và thơm. Nhân viên tư vấn nhiệt
+              tình, giúp tôi chọn được bó hoa ưng ý nhất."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3"
+              >
+                <i class="ri-user-line text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">Trần Văn Minh</h4>
+                <p class="text-gray-500 text-sm">Khách hàng tại TP. HCM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex text-yellow-400 mb-3">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Đã nhiều lần đặt hoa tại đây và chưa bao giờ thất vọng. Hoa luôn
+              tươi, thiết kế đẹp và giao hàng đúng hẹn. Đặc biệt ấn tượng với
+              dịch vụ khách hàng, luôn sẵn sàng hỗ trợ khi cần."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-3"
+              >
+                <i class="ri-user-line text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-800">Lê Thị Thanh Hà</h4>
+                <p class="text-gray-500 text-sm">Khách hàng tại Đà Nẵng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-primary bg-opacity-10">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Đăng Ký Nhận Tin
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Đăng ký để nhận thông tin về các chương trình khuyến mãi và bộ sưu
+            tập mới nhất
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <input
+              type="email"
+              placeholder="Email của bạn"
+              class="flex-grow px-4 py-3 rounded-button border-none focus:ring-2 focus:ring-primary text-gray-700"
+            />
+            <button
+              class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+            >
+              Đăng ký
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 block"
+              >logo</a
+            >
+            <p class="text-gray-300 mb-6">
+              Chúng tôi cung cấp những bó hoa tươi nhất, được chọn lọc kỹ lưỡng
+              và thiết kế tinh tế cho mọi dịp đặc biệt của bạn.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-tiktok-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Liên Kết Nhanh</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Sản phẩm</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Về chúng tôi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Liên hệ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Câu hỏi thường gặp</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Chính Sách</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Chính sách giao hàng</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Điều khoản sử dụng</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Phương thức thanh toán</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Liên Hệ</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-300"
+                  >123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span
+                >
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-300">+84 123 456 789</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-300">info@hoatuoi.com</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1"
+                >
+                  <i class="ri-time-line"></i>
+                </div>
+                <span class="text-gray-300"
+                  >Mở cửa: 8:00 - 21:00 (Thứ 2 - Chủ nhật)</span
+                >
+              </li>
+            </ul>
+            <div class="mt-6 flex items-center space-x-3">
+              <span class="text-gray-300">Thanh toán:</span>
+              <div class="flex space-x-2">
+                <i class="ri-visa-fill text-2xl"></i>
+                <i class="ri-mastercard-fill text-2xl"></i>
+                <i class="ri-paypal-fill text-2xl"></i>
+                <i class="ri-bank-card-fill text-2xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Hoa Tươi. Tất cả các quyền được bảo lưu.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Chat Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <button
+        class="bg-primary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-opacity-90 transition-colors"
+      >
+        <i class="ri-chat-3-line text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="fixed bottom-6 right-24 z-50 scroll-to-top">
+      <button
+        class="bg-gray-800 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+      >
+        <i class="ri-arrow-up-line text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Promo Popup -->
+    <div
+      id="promo-popup"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden"
+    >
+      <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative">
+        <button
+          id="close-popup"
+          class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+        >
+          <i class="ri-close-line text-xl"></i>
+        </button>
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">
+            Chào mừng bạn đến với Hoa Tươi!
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Đăng ký nhận tin để nhận ngay mã giảm giá 10% cho đơn hàng đầu tiên
+          </p>
+          <div class="mb-4">
+            <input
+              type="email"
+              placeholder="Email của bạn"
+              class="w-full px-4 py-3 rounded-button border border-gray-200 mb-3 focus:border-primary"
+            />
+            <button
+              class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap"
+            >
+              Nhận mã giảm giá
+            </button>
+          </div>
+          <div class="flex items-center justify-center">
+            <label class="custom-checkbox flex items-center">
+              <input type="checkbox" checked />
+              <span class="checkmark mr-2"></span>
+              <span class="text-sm text-gray-600"
+                >Tôi đồng ý nhận thông tin khuyến mãi</span
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script id="scroll-to-top">
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add("active");
+          } else {
+            scrollToTopButton.classList.remove("active");
+          }
+        });
+
+        scrollToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <script id="popup-handler">
+      document.addEventListener("DOMContentLoaded", function () {
+        const promoPopup = document.getElementById("promo-popup");
+        const closePopup = document.getElementById("close-popup");
+
+        // Show popup after 3 seconds
+        setTimeout(function () {
+          promoPopup.classList.remove("hidden");
+        }, 3000);
+
+        closePopup.addEventListener("click", function () {
+          promoPopup.classList.add("hidden");
+        });
+
+        // Close popup when clicking outside
+        promoPopup.addEventListener("click", function (e) {
+          if (e.target === promoPopup) {
+            promoPopup.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
